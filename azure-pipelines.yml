@@ -9,7 +9,8 @@ pr:
       - master
 
 pool:
-  vmImage: ubuntu-latest
+  # vmImage: ubuntu-latest
+  name: default
 
 steps:
 - script: echo Building the Vite Website...
