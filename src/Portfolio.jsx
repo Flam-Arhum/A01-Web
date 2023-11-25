@@ -1,3 +1,4 @@
+// src/App.js
 import React, { useState } from 'react';
 import './App.css';
 
@@ -8,6 +9,18 @@ function Portfolio() {
     { name: 'Project 2', tech: 'Java' },
     { name: 'Project 3', tech: 'Node.js' },
     // Add more projects as needed
+  ];
+
+  const education = [
+    '9th Grade - School Name',
+    '10th Grade - School Name',
+    // Add more education details as needed
+  ];
+
+  const certifications = [
+    'Certification 1 - Certification Body',
+    'Certification 2 - Certification Body',
+    // Add more certification details as needed
   ];
 
   return (
@@ -45,9 +58,18 @@ function Portfolio() {
       <section id="education">
         <h2>Education</h2>
         <ul>
-          <li>9th Grade - School Name</li>
-          <li>10th Grade - School Name</li>
-          {/* Add more education details as needed */}
+          {education.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section id="certifications">
+        <h2>Certifications</h2>
+        <ul>
+          {certifications.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
         </ul>
       </section>
 
