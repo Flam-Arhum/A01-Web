@@ -1,51 +1,52 @@
 // src/App.js
 import React, { useState } from 'react';
-import './App.css';
 
 function Portfolio() {
   const [filter, setFilter] = useState('');
   const projects = [
-    { name: 'Project 1', tech: 'C#' },
-    { name: 'Project 2', tech: 'Java' },
-    { name: 'Project 3', tech: 'Node.js' },
-    // Add more projects as needed
+    { name: 'Facial Clustering via AutoEncoders', tech: 'Python' },
+    { name: 'Library Management System', tech: 'Java' },
+    { name: 'Pacman', tech: 'C++' },
   ];
 
   const education = [
-    '9th Grade - School Name',
-    '10th Grade - School Name',
-    // Add more education details as needed
+    'Undergraduate Degree - FAST NUCES',
+    'High School - DHACSS SKBZ Campus',
   ];
 
   const certifications = [
-    'Certification 1 - Certification Body',
-    'Certification 2 - Certification Body',
-    // Add more certification details as needed
+    'Machine Learning - Stanford University',
+    'Deep Learning - Stanford University',
+    'Front End Web Development - freeCodeCamp',
+    'AWS Certified Cloud Practitioner - Amazon Web Services',
+    'Advanced Python - freeCodeCamp',
   ];
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Your Name</h1>
-        <p>Web Developer | Software Engineer</p>
+    <div style={{ fontFamily: 'Arial, sans-serif', backgroundColor: '#f4f4f4', margin: '0', padding: '0', minHeight: '100vh', minWidth: '200vh'}}>
+      <header style={{ backgroundColor: '#00bcd4', color: '#000', textAlign: 'center', padding: '1em 0' }}>
+        <h1>Arhum Hashmi</h1>
+        <p>Software Engineer | ML/DL Engineer | UI/UX Designer</p>
       </header>
 
-      <nav>
+      <nav style={{ backgroundColor: '#0097a7', padding: '0.5em', textAlign: 'center' }}>
         <input
           type="text"
-          placeholder="Filter projects by technology"
+          placeholder="Filter"
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
+          style={{ padding: '0.3em' }}
         />
       </nav>
 
-      <section id="home">
-        <h2>Home</h2>
-        <p>Welcome to my portfolio website. I am a passionate web developer with experience in various technologies.</p>
+      <section style={{ padding: '20px', color: '#000' }} id="home">
+        <h2>Profile</h2>
+        <p>23 Years old | PostGrad @ IBA Karachi | MS(DS)</p>
       </section>
+      
 
-      <section id="projects">
-        <h2>Projects</h2>
+      <section style={{ padding: '20px', color: '#000' }} id="projects">
+        <h2>Personal Projects</h2>
         <ul>
           {projects
             .filter((project) => project.tech.toLowerCase().includes(filter.toLowerCase()))
@@ -55,7 +56,7 @@ function Portfolio() {
         </ul>
       </section>
 
-      <section id="education">
+      <section style={{ padding: '20px', color: '#000' }} id="education">
         <h2>Education</h2>
         <ul>
           {education.map((item, index) => (
@@ -64,7 +65,7 @@ function Portfolio() {
         </ul>
       </section>
 
-      <section id="certifications">
+      <section style={{ padding: '20px', color: '#000' }} id="certifications">
         <h2>Certifications</h2>
         <ul>
           {certifications.map((item, index) => (
@@ -72,10 +73,6 @@ function Portfolio() {
           ))}
         </ul>
       </section>
-
-      <footer>
-        <p>2023 Your Name. All rights reserved.</p>
-      </footer>
     </div>
   );
 }
